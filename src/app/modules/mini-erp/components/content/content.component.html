@@ -1,0 +1,33 @@
+<section>
+  <h3>Produtos</h3>
+
+  <p>
+    Aqui voce pode ver todos os produtos cadastrados:
+  </p>
+
+  <table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>ProductCode</th>
+      <th>Price</th>
+      <th>Unit</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @for (prod of products; track prod.id) {
+      <tr>
+        <td>{{ prod.id }}</td>
+        <td>{{ prod.name }}</td>
+        <td>{{ prod.productCode }}</td>
+        <td>{{ prod.price | currency}}</td>
+        <td>{{ prod.unit }}</td>
+        <td>{{ prod.description }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
+</section>
