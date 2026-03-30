@@ -5,29 +5,39 @@
     Aqui voce pode ver todos os produtos cadastrados:
   </p>
 
-  <table>
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>ProductCode</th>
-      <th>Price</th>
-      <th>Unit</th>
-      <th>Description</th>
-    </tr>
-  </thead>
+<table mat-table [dataSource]="products">
 
-  <tbody>
-    @for (prod of products; track prod.id) {
-      <tr>
-        <td>{{ prod.id }}</td>
-        <td>{{ prod.name }}</td>
-        <td>{{ prod.productCode }}</td>
-        <td>{{ prod.price | currency}}</td>
-        <td>{{ prod.unit }}</td>
-        <td>{{ prod.description }}</td>
-      </tr>
-    }
-  </tbody>
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>Id</th>
+    <td mat-cell *matCellDef="let product"> {{product.id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Name</th>
+    <td mat-cell *matCellDef="let product"> {{product.name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="productCode">
+    <th mat-header-cell *matHeaderCellDef>Product Code</th>
+    <td mat-cell *matCellDef="let product"> {{product.productCode}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="price">
+    <th mat-header-cell *matHeaderCellDef>Price</th>
+    <td mat-cell *matCellDef="let product"> {{product.price}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="unit">
+    <th mat-header-cell *matHeaderCellDef>Unit</th>
+    <td mat-cell *matCellDef="let product"> {{product.unit}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef>Description</th>
+    <td mat-cell *matCellDef="let product"> {{product.description}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let p; columns: displayedColumns;"></tr>
 </table>
 </section>
