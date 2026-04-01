@@ -1,0 +1,16 @@
+:host {
+
+  text-align: center;
+
+  #product-card-header {
+    display: flexbox;
+    justify-content: center;
+  }
+
+  .product-card {
+    max-width: 800px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+  }
+}
