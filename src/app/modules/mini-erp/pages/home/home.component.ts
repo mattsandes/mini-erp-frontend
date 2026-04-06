@@ -1,18 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { MatGridList, MatGridTile } from '@angular/material/grid-list';
 import { HeaderComponent } from '../../components/header/header.component';
-import { IProducts } from '../../interfaces/IProducts';
+import { ProductchartComponent } from '../../components/productchart/productchart.component';
+import { IProducts } from '../../interfaces/products/IProducts';
 import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
+    ProductchartComponent,
     MatCardModule,
-    MatGridList,
     HeaderComponent,
-    MatGridTile
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

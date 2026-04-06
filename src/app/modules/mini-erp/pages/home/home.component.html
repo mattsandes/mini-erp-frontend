@@ -1,19 +1,19 @@
 <app-header />
 
 <main>
-  <h1>Resumo geral</h1>
+  <section id="erp-report">
+    <h1>Resumo geral</h1>
 
-  <p>
-    Pellentesque porta, enim ac cursus scelerisque, odio sapien ornare sem, eu pharetra magna ex quis nisi.
-    Mauris accumsan nisi in orci ultricies, nec faucibus odio finibus. Quisque imperdiet augue sapien, non faucibus velit dapibus sed.
-    Duis sodales dui enim, a dignissim justo imperdiet in. Morbi ultrices efficitur condimentum.
-    Curabitur a felis et ex accumsan cursus. Sed eget nulla quam. Aliquam erat volutpat.
-    Vivamus dapibus dictum arcu, sed gravida neque pellentesque sagittis. Nullam ipsum sem, congue at tortor sed, accumsan rutrum lectus.
-    Suspendisse viverra nunc sed fermentum faucibus. Curabitur mollis commodo metus id porttitor.
-  </p>
-  <mat-grid-list cols="2" rowHeight="500px">
-    <mat-grid-tile>
+    <p>
+      Pellentesque porta, enim ac cursus scelerisque, odio sapien ornare sem, eu pharetra magna ex quis nisi.
+      Mauris accumsan nisi in orci ultricies, nec faucibus odio finibus. Quisque imperdiet augue sapien, non faucibus velit dapibus sed.
+      Duis sodales dui enim, a dignissim justo imperdiet in. Morbi ultrices efficitur condimentum.
+      Curabitur a felis et ex accumsan cursus. Sed eget nulla quam. Aliquam erat volutpat.
+      Vivamus dapibus dictum arcu, sed gravida neque pellentesque sagittis. Nullam ipsum sem, congue at tortor sed, accumsan rutrum lectus.
+      Suspendisse viverra nunc sed fermentum faucibus. Curabitur mollis commodo metus id porttitor.
+    </p>
 
+    <section id="mat-card-section">
       <mat-card class="product-card" appearance="outlined">
 
         <mat-card-header id="product-card-header">
@@ -22,45 +22,10 @@
         </mat-card-header>
 
         <mat-card-content>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin augue a enim volutpat, id gravida urna blandit.
-            Praesent sed consectetur ex, vitae iaculis lorem. Nam in turpis semper, laoreet tortor ac, rutrum mauris.
-            Vestibulum vehicula eros eget dui vulputate egestas. Nam id tellus vel est luctus eleifend. Integer suscipit dignissim cursus.
-            Nunc ac mauris sit amet mi accumsan placerat. Etiam vehicula efficitur arcu, quis tincidunt quam vehicula sed.
-            Nulla id finibus diam, quis varius nunc.
-          </p>
-
-          <p>
-            Produtos cadastrados no sistema: {{ products.length }}
-          </p>
+          <app-productchart />
         </mat-card-content>
       </mat-card>
 
-    </mat-grid-tile>
-
-    <mat-grid-tile>
-      <mat-card class="product-card" appearance="outlined">
-
-        <mat-card-header id="product-card-header">
-          <mat-card-title>Produtos</mat-card-title>
-          <mat-card-subtitle>Dashboard para produtos criados o sistema</mat-card-subtitle>
-        </mat-card-header>
-
-        <mat-card-content>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin augue a enim volutpat, id gravida urna blandit.
-            Praesent sed consectetur ex, vitae iaculis lorem. Nam in turpis semper, laoreet tortor ac, rutrum mauris.
-            Vestibulum vehicula eros eget dui vulputate egestas. Nam id tellus vel est luctus eleifend. Integer suscipit dignissim cursus.
-            Nunc ac mauris sit amet mi accumsan placerat. Etiam vehicula efficitur arcu, quis tincidunt quam vehicula sed.
-            Nulla id finibus diam, quis varius nunc.
-          </p>
-
-          <p>
-            Produtos cadastrados no sistema: {{ products.length }}
-          </p>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-
-  </mat-grid-list>
+  </section>
+    </section>
 </main>

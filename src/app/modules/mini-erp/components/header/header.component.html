@@ -1,8 +1,56 @@
 <header>
-  <h1>Mini-ERP</h1>
 
-  <ul>
-    <li><a routerLink="/" routerLinkActive="active">Home</a></li>
-    <li><a routerLink="/products" routerLinkActive="active">Products</a></li>
-  </ul>
+  <mat-toolbar>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <span>Mini-ERP</span>
+    <span class="example-spacer"></span>
+  </mat-toolbar>
+
+  <mat-menu #menu="matMenu">
+    <!-- <=========== Menus ============> -->
+    <button mat-menu-item routerLink="/">
+      Home
+    </button>
+
+    <button mat-menu-item [matMenuTriggerFor]="productsMenu">
+      Products
+    </button>
+
+    <button mat-menu-item [matMenuTriggerFor]="customerMenu">
+      Customer
+    </button>
+
+  </mat-menu>
+
+  <!-- <====== Itens dos menus =========> -->
+  <mat-menu #productsMenu="matMenu">
+    <button mat-menu-item routerLink="/products">
+      Ver produtos
+    </button>
+
+    <button mat-menu-item routerLink="/create-products">
+      Cadastrar produtos
+    </button>
+  </mat-menu>
+
+  <mat-menu #customerMenu="matMenu">
+    <button mat-menu-item routerLink="/customers">
+      Ver Clientes
+    </button>
+
+    <button mat-menu-item [matMenuTriggerFor]="manageCustomers">
+      Gerenciar clientes
+    </button>
+
+  </mat-menu>
+
+  <mat-menu #manageCustomers="matMenu">
+    <button mat-menu-item routerLink="/create-customer">
+      Cadastrar clientes
+    </button>
+  </mat-menu>
+
 </header>

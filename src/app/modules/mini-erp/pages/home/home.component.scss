@@ -2,6 +2,27 @@
 
   text-align: center;
 
+  #erp-report {
+    margin-top: 8px;
+  }
+
+  #mat-card-section {
+    margin: 0 auto;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  #erp-report {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%;
+  }
+
   #product-card-header {
     display: flexbox;
     justify-content: center;

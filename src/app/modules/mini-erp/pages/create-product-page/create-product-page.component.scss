@@ -1,0 +1,11 @@
+:host {
+  #create-product-section {
+    margin-top: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: min(1200px, 90%);
+  }
+}

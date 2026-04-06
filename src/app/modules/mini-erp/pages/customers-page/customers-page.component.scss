@@ -1,11 +1,9 @@
 :host {
-
-  text-align: center;
-
-  #product-list-section {
-    margin: 0 auto;
+  #customer-list-section {
+    text-align: center;
     display: flex;
     justify-content: center;
+    margin: 0 auto;
     flex-direction: column;
     width: min(1200px, 90%);
   }

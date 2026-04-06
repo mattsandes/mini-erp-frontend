@@ -1,0 +1,42 @@
+<app-header />
+
+<main>
+  <section id="create-client-section">
+
+    <h2>Criar produto</h2>
+
+    <form [formGroup]="customerGroup" (submit)="createCustomer()">
+      <mat-form-field>
+        <mat-label for="name">Customer Name</mat-label>
+        <input matInput formControlName="name"/>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label for="cpf">Cpf/Cnpj</mat-label>
+        <input matInput formControlName="cpf"/>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label for="telefone">Telefone</mat-label>
+        <input matInput formControlName="telefone"/>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label for="email">Email</mat-label>
+        <input matInput formControlName="email"/>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label for="type">Customer Type</mat-label>
+        <input matInput formControlName="type"/>
+      </mat-form-field><br>
+
+      <mat-form-field>
+        <mat-label for="observations">Observations</mat-label>
+        <input matInput formControlName="observations"/>
+      </mat-form-field><br>
+
+      <button mat-raised-button>Cadastrar</button>
+    </form>
+  </section>
+</main>
