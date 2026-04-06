@@ -4,7 +4,12 @@
   <section id="customer-list-section">
     <h2>Resumo de cliente</h2>
 
-    <table mat-table [dataSource]="customers" id="customer-table">
+    <mat-form-field>
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilters($event)" placeholder="Ex. Cliente" #input>
+    </mat-form-field>
+
+    <table mat-table [dataSource]="dataSource" id="customer-table">
 
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef>Id</th>
@@ -43,6 +48,10 @@
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let customer; columns: displayedColumns;"></tr>
+
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+      </tr>
     </table>
   </section>
 </main>
