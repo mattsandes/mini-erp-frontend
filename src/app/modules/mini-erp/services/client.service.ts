@@ -20,4 +20,8 @@ export class ClientService {
   public createCustomers(customer: ICreateCostumers): Observable<ICreateCostumers> {
     return this.http.post<ICreateCostumers>(`${this.url}/customers`, customer);
   }
+
+  public findCustomerById(id: number): Observable<ICustomers> {
+    return this.http.get<ICustomers>(`${this.url}/customers/${id}`);
+  }
 }
