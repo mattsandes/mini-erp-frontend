@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
+import { ClientchartsComponent } from '../../components/clientcharts/clientcharts.component';
 import { HeaderComponent } from '../../components/header/header.component';
 import { ProductchartComponent } from '../../components/productchart/productchart.component';
 import { IProducts } from '../../interfaces/products/IProducts';
@@ -9,10 +10,11 @@ import { ProductService } from '../../services/product.service';
   selector: 'app-home',
   standalone: true,
   imports: [
+    ClientchartsComponent,
     ProductchartComponent,
     MatCardModule,
     HeaderComponent,
-],
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

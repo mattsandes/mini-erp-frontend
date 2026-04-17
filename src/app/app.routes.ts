@@ -10,15 +10,15 @@ export const routes: Routes = [
     title: 'Mini-ERP | Homepage', component: HomeComponent, path: ''
   },
   {
-    title: 'Mini-ERP | Products Page', component: ProductsComponent, path: 'products'
+    title: 'Mini-ERP | Products Overview', component: ProductsComponent, path: 'products'
   },
   {
     title: 'Mini-ERP | Create Products', component: CreateProductPageComponent, path: 'create-products'
   },
   {
-    title: 'Mini-ERP | Cusotmers Page', component: CustomersPageComponent, path: 'customers'
+    title: 'Mini-ERP | Cusotmers Overview', component: CustomersPageComponent, path: 'customers'
   },
   {
-    title: 'Mini-ERP | Create Customer Page', component: CreateCustomersComponent, path: 'create-customer'
+    title: 'Mini-ERP | Create Customer', component: CreateCustomersComponent, path: 'create-customer'
   }
 ];
